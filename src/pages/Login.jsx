@@ -12,6 +12,7 @@ import { FaEnvelope, FaKey } from "react-icons/fa";
 import Title from "../components/Title.jsx";
 import { FaRightFromBracket, FaRightToBracket } from "react-icons/fa6";
 import MyFooter from "../components/MyFooter.jsx";
+import ShowToast from "../components/ShowToast.jsx";
 
 function Login() {
 	const schema = yup.object().shape({
@@ -45,7 +46,8 @@ function Login() {
 				});
 			} else {
 				localStorage.setItem("token", response.data);
-				// navigate("/account");
+				ShowToast("Logged in successfully", "success");
+				navigate("/");
 			}
 		} catch (error) {
 			console.error("Login failed:", error);

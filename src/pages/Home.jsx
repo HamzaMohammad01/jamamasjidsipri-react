@@ -12,6 +12,11 @@ export default function Home() {
 		getPrayerTime();
 	}, []);
 	const getPrayerTime = async () => {
+		// try {
+		// } catch (error) {
+		// 	console.error(error);
+		// 	console.error(error.response);
+		// }
 		const response = await getSalah();
 		setData(response.data[0]);
 	};
@@ -42,6 +47,6 @@ export default function Home() {
 			<MyFooter />
 		</>
 	) : (
-		<span className="loading loading-dots loading-lg"></span>
+		<span className="loading loading-dots loading-lg flex items-center justify-center"></span>
 	);
 }

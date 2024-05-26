@@ -1,7 +1,7 @@
 import { create } from "apisauce";
 
 const apiClient = create({
-	baseURL: "http://localhost:8000/api/",
+	baseURL: "https://salahtime-backend.onrender.com/api/",
 });
 
 export default apiClient;

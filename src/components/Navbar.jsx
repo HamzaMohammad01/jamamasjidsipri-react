@@ -1,6 +1,7 @@
 import React from "react";
 import { FaBell, FaRegBell, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ThemeChange from "../components/ThemeChange";
 
 export default function Navbar() {
 	return (
@@ -61,6 +62,7 @@ export default function Navbar() {
 				</Link>
 			</div>
 			<div className="navbar-end">
+				<ThemeChange />
 				<button className="btn btn-ghost btn-circle">
 					<div className="indicator">
 						<FaRegBell className="h-5 w-5" />
