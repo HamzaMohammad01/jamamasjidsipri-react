@@ -63,12 +63,22 @@ export default function Navbar() {
 			</div>
 			<div className="navbar-end">
 				<ThemeChange />
-				<button className="btn btn-ghost btn-circle">
-					<div className="indicator">
-						<FaRegBell className="h-5 w-5" />
-						<span className="badge badge-xs badge-primary indicator-item"></span>
-					</div>
-				</button>
+				<details className="dropdown dropdown-end">
+					<summary className="btn btn-ghost btn-circle">
+						<div className="indicator">
+							<FaRegBell className="h-5 w-5" />
+							<span className="badge badge-xs badge-primary indicator-item"></span>
+						</div>
+					</summary>
+					<ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+						<li>
+							<a>Item 1</a>
+						</li>
+						<li>
+							<a>Item 2</a>
+						</li>
+					</ul>
+				</details>
 			</div>
 		</div>
 	);

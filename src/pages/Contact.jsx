@@ -9,7 +9,7 @@ export default function Contact() {
 		<>
 			<Navbar />
 			<Title text="Contact" />
-			<div className="w-full p-5 space-y-5">
+			<div className="w-full p-5 space-y-5 flex">
 				<div className="max-w-md mx-auto">
 					<div className="daisy-card p-8 space-y-6 bg-primary rounded-2xl mb-10">
 						<h2 className="daisy-heading text-2xl font-bold">
