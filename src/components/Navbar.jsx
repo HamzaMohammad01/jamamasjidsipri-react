@@ -30,7 +30,7 @@ export default function Navbar() {
 					</summary>
 					<ul
 						// tabIndex={0}
-						className="menu menu-lg dropdown-content mt-3 bg-transparent backdrop-blur text-black font-bold z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+						className="menu menu-lg dropdown-content mt-3 bg-transparent backdrop-blur font-bold z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 					>
 						<li>
 							<Link to={"/"}>Namaz Time</Link>

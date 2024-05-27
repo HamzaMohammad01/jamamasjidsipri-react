@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function ThemeChange() {
+export default function ThemeToggle() {
+	const [theme, setTheme] = useState(
+		localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+	);
+
+	// update state on toggle
+	const handleToggle = (e) => {
+		if (e.target.checked) {
+			setTheme("dark");
+		} else {
+			setTheme("light");
+		}
+	};
+
+	// set theme state in localstorage on mount & also update localstorage on state change
+	useEffect(() => {
+		localStorage.setItem("theme", theme);
+		const localTheme = localStorage.getItem("theme");
+		// add custom data-theme attribute to html tag required to update theme using DaisyUI
+		document.querySelector("html").setAttribute("data-theme", localTheme);
+	}, [theme]);
+
 	return (
 		<label className="swap swap-rotate">
 			{/* this hidden checkbox controls the state */}
-			<input type="checkbox" />
+			<input
+				type="checkbox"
+				className="theme-controller"
+				onChange={handleToggle}
+				checked={theme === "light" ? false : true}
+			/>
 
 			{/* sun icon */}
 			<svg
-				className="swap-on fill-current w-5 h-5"
+				className="swap-off fill-current w-5 h-5"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 			>
@@ -17,7 +43,7 @@ export default function ThemeChange() {
 
 			{/* moon icon */}
 			<svg
-				className="swap-off fill-current w-5 h-5"
+				className="swap-on fill-current w-5 h-5"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 			>

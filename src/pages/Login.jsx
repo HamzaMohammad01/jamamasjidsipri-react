@@ -79,16 +79,16 @@ function Login() {
 					register={register}
 					errors={errors}
 				/>
-				<button className="btn btn-primary self-center text-primary">
+				<button className="btn btn-primary self-center">
 					LOGIN
 					<FaRightToBracket />
 					<input type="submit" className="hidden" />
 				</button>
 			</form>
-			<div className="mt-7 text-text-0 text-xl mx-auto lg:absolute lg:bottom-5 lg:right-1/3 text-center">
+			<div className="mt-7 text-xl mx-auto lg:absolute lg:bottom-5 lg:right-1/3 text-center">
 				<span>Don’t have an account yet? </span>
 				<span
-					className="text-[dodgerblue] cursor-pointer"
+					className=" cursor-pointer"
 					onClick={() => navigate("/signup")}
 				>
 					Create New Account

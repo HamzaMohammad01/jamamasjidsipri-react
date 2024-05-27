@@ -4,6 +4,7 @@ import PrayerTime from "../components/PrayerTime";
 import Navbar from "../components/Navbar";
 import MyFooter from "../components/MyFooter";
 import { getSalah } from "../api/prayertime";
+import Loading from "../components/Loading";
 import _ from "underscore";
 
 export default function Home() {
@@ -47,6 +48,8 @@ export default function Home() {
 			<MyFooter />
 		</>
 	) : (
-		<span className="loading loading-dots loading-lg flex items-center justify-center"></span>
+		<div className="h-svh w-svw flex items-center justify-center">
+			<Loading />
+		</div>
 	);
 }

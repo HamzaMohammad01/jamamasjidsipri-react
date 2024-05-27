@@ -9,7 +9,7 @@ export default function About() {
 			<Navbar />
 			<Title text="ABOUT US" />
 			<div className="mt-5 px-3 space-y-3 flex flex-col">
-				<p className="text-text-0 text-xl">
+				<p className="content text-xl">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 					do eiusmod tempor incididunt ut labore et dolore magna
 					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -19,7 +19,7 @@ export default function About() {
 					occaecat cupidatat non proident, sunt in culpa qui officia
 					deserunt mollit anim id est laborum.
 				</p>
-				<p className="text-text-0 text-xl">
+				<p className="text-xl">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 					do eiusmod tempor incididunt ut labore et dolore magna
 					aliqua. Ut enim ad minim veniam, quis nostrud exercitation

@@ -2,5 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+[data-theme="light"] {
+	@apply bg-primary; /* Use DaisyUI's neutral color for light theme */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Monofett&display=swap");
