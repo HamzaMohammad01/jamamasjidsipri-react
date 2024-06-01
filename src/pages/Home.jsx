@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Title from "../components/Title";
 import PrayerTime from "../components/PrayerTime";
 import Navbar from "../components/Navbar";
@@ -22,8 +22,14 @@ export default function Home() {
 		setData(response.data[0]);
 	};
 
-	return data ? (
-		<>
+	return (
+		<Suspense
+			fallback={
+				<div className="h-svh w-svw flex items-center justify-center">
+					<Loading />
+				</div>
+			}
+		>
 			<Navbar />
 			<Title icon />
 			<div className="w-full p-5 space-y-5 block">
@@ -46,10 +52,6 @@ export default function Home() {
 				))}
 			</div>
 			<MyFooter />
-		</>
-	) : (
-		<div className="h-svh w-svw flex items-center justify-center">
-			<Loading />
-		</div>
+		</Suspense>
 	);
 }
